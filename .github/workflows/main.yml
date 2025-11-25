@@ -16,7 +16,7 @@ jobs:
           python3 -m unittest discover -s tests
           echo '--- START TESTS ---';
   windows_runner:
-    runs-on: windows-lates
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
