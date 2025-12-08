@@ -11,7 +11,7 @@ jobs:
       - name: Run tests
         run: |
           echo '--- START WORK ON REMOTE SERVER ---';
-          sudo apt update && sudo apt install python3
+          sudo apt update && sudo apt install python3 && pip install coverage
           echo '--- DOWNLOADING PYTHON ---';
           coverage run -m unittest discover -s tests && coverage report
           echo '--- START TESTS ---';
@@ -25,7 +25,7 @@ jobs:
       - name: Run tests
         run: |
           echo '--- START WORK ON REMOTE SERVER ---';
-          python -m pip install --upgrade pip
+          python -m pip install --upgrade pip && pip install coverage
           echo '--- DOWNLOADING PYTHON ---';
           coverage run -m unittest discover -s tests && coverage report
           echo '--- START TESTS ---';
